@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="FlightSearch" ng-controller="AppCtrl">
+  <head>
+    <title ng-bind="pageTitle"></title>
+
+    <!-- social media tags -->
+    <meta property="og:title" content="Sean FlightSearch" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://seancodinglab.com/flight-search" />
+    <meta property="og:description" content="A flight search app">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- font awesome from BootstrapCDN -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- semantic ui -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js"></script>
+
+    <!-- google map api -->
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&language=en"></script>
+
+    <!-- angular spinner -->
+    <script type="text/javascript" src="http://fgnass.github.io/spin.js/spin.min.js"></script>
+
+    <!-- compiled CSS -->
+    <link rel="stylesheet" type="text/css" href="vendor/angular-ui-grid/ui-grid.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/dist/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/angular-growl-v2/build/angular-growl.css" />
+    <link rel="stylesheet" type="text/css" href="assets/FlightSearch-1.0.0.css" />
+
+    <!-- compiled JavaScript -->
+    <script type="text/javascript" src="vendor/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="vendor/angular/angular.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="vendor/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+    <script type="text/javascript" src="vendor/angular-ui-grid/ui-grid.js"></script>
+    <script type="text/javascript" src="vendor/moment/min/moment.min.js"></script>
+    <script type="text/javascript" src="vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="vendor/angular-spinner/angular-spinner.min.js"></script>
+    <script type="text/javascript" src="vendor/angular-growl-v2/build/angular-growl.js"></script>
+    <script type="text/javascript" src="vendor/ngAutocomplete/src/ngAutocomplete.js"></script>
+    <script type="text/javascript" src="vendor/angular-utils-pagination/dirPagination.js"></script>
+    <script type="text/javascript" src="src/app/app.js"></script>
+    <script type="text/javascript" src="src/app/data/data.js"></script>
+    <script type="text/javascript" src="src/app/results/results.js"></script>
+    <script type="text/javascript" src="src/app/search/search.js"></script>
+    <script type="text/javascript" src="templates-common.js"></script>
+    <script type="text/javascript" src="templates-app.js"></script>
+  </head>
+  <body>
+  <div>
+    <div growl></div>
+    <div class="jumbotron">
+      <h1>Flight Search</h1>
+    </div>
+    <span us-spinner="{radius:30, width:8, length: 16}" spinner-key="spinner-1"></span>
+    <div ui-view></div>
+  </div>
+  </body>
+</html>

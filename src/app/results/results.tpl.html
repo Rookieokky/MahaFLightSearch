@@ -1,0 +1,44 @@
+<div class="container">
+	<div class="row">
+		<!--div class="gridStyle" ui-grid="vm.gridOptions" ui-grid-resize-columns style="height: 330px"></div-->
+
+		<table class="ui single line selectable celled table">
+			<thead>
+				<tr>
+					<th>Price</th>
+					<th>Carrier</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr dir-paginate="data in vm.flightData | itemsPerPage:5" ng-click="vm.details(data)">
+					<td>
+						<b>{{data.totalPrice}}</b>
+						<p style="opacity: 0.5; font-size: 12px">{{data.pricePerson}}</p>
+					</td>
+					<td>{{data.carrier.join(" + ")}}</td>
+					<td>
+						<div>
+							<div><b>{{vm.convertTime(data.depart.departure)}}</b>
+							 ------------ <b>{{vm.convertTime(data.depart.arrival)}}</b></div>
+							 <div>[{{vm.convertMinToHr(data.departDuration)}}]</div>
+							 <div>{{data.depart.stops}} stops</div>
+						</div>
+						<div ng-show="vm.isReturnFlight(data)">
+							<br>
+							<div><b>{{vm.convertTime(data.return.departure)}}</b>
+							 ------------ <b>{{vm.convertTime(data.return.arrival)}}</b></div>
+							 <div>[{{vm.convertMinToHr(data.returnDuration)}}]</div>
+							 <div>{{data.return.stops}} stops</div>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<dir-pagination-controls
+			max-size="10"
+			direction-links="true"
+			boundary-links="true" >
+		</dir-pagination-controls>
+	</div>
+</div>
