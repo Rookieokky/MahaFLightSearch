@@ -1,9 +1,9 @@
 (function(angular, undefined) {
   'use strict';
 
-  var _DEPENDENCIES = ['ui.router', 
-                       'ui.bootstrap', 
-                       'FlightSearch-project', 
+  var _DEPENDENCIES = ['ui.router',
+                       'ui.bootstrap',
+                       'FlightSearch-project',
                        'FlightSearch-data',
                        'ngAutocomplete'];
 
@@ -12,7 +12,7 @@
          .directive('datepicker', datepicker)
          .controller('SearchController', SearchController);
 
-  datepicker.$inject = ['$compile']; 
+  datepicker.$inject = ['$compile'];
   function datepicker($compile) {
     return {
       restrict: 'A',
@@ -56,6 +56,7 @@
     vm.from = "";
     vm.to = "";
     vm.adult = 1;
+    vm.child = 1;
     vm.departDate = "";
     vm.returnDate = "";
     vm.tripType = "return";
@@ -130,7 +131,7 @@
       if(vm.tripType !== 'return') {
         vm.returnDate = "";
       }
-      
+
       flightSearchProjectService.searchFlight(from, to, vm.adult, vm.departDate, vm.returnDate, $scope);
     }
 
