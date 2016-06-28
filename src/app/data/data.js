@@ -10,7 +10,7 @@
   function iataDataService($timeout, $q, $location) {
 
     // REPLACE THIS WITH YOUR OWN API KEY
-    var apiKey = "AIzaSyBgruuaOgXt-0htfAmTFNaNwSCj65gOYuk";
+    var apiKey = "AIzaSyAgJsFsW8URVrS17TLNuoPBF10JN7yusf0";
 
     var airportIATA = [
     {
