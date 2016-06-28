@@ -104,7 +104,7 @@ function flightSearchProjectService($timeout, $q, $location, iataDataService, us
             results["returnDuration"] = slices[1]["duration"];
             getSegmentDetails(results, returnSegments, true);
           }
-          
+
           flightResults.push(results);
         }
         console.log(flightResults);
@@ -113,7 +113,7 @@ function flightSearchProjectService($timeout, $q, $location, iataDataService, us
         // navigate to results page after gotten the results.
         $timeout(function() {
           $location.path("/results");
-        }, 0); 
+        }, 0);
       }
       else {
         growl.error("No trips can be found for this inputs!");

@@ -153,6 +153,12 @@ angular.module("search/search.tpl.html", []).run(["$templateCache", function($te
     "            <input type=\"text\" class=\"form-control\" id=\"adults\" min=\"1\" max=\"8\" ng-model=\"vm.adult\">\n" +
     "            <!--button type=\"button\" class=\"increment\" data-selector=\"#adults\">+</button-->\n" +
     "          </div>\n" +
+    "          <div class=\"form-group\">\n" +
+    "            <label for=\"childs\">Childs:</label>\n" +
+    "            <!--button type=\"button\" class=\"decrement\" data-selector=\"#adults\">-</button-->\n" +
+    "            <input type=\"text\" class=\"form-control\" id=\"childs\" min=\"1\" max=\"8\" ng-model=\"vm.child\">\n" +
+    "            <!--button type=\"button\" class=\"increment\" data-selector=\"#adults\">+</button-->\n" +
+    "          </div>\n" +
     "          <div>\n" +
     "            <div class=\"radio\">\n" +
     "              <label>\n" +
@@ -173,5 +179,6 @@ angular.module("search/search.tpl.html", []).run(["$templateCache", function($te
     "          </button>\n" +
     "        </form>\n" +
     "    </div>\n" +
-    "</div>");
+    "</div>\n" +
+    "");
 }]);
